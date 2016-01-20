@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block head %}
+
+
+{% endblock %}
+
+{% block title %}New Paste | LodgeIt! {% endblock %}
+
+{% block main %}
+  <form name="code_form" action="/", method="post">
+  {% csrf_token %}
+  <textarea class="code" name="code"></textarea>
+  <div class="tools">
+    <button class="btn waves-effect waves-light red lighten-1 right" type="submit" name="action">Paste!
+      <i class="material-icons right">done</i>
+    </button>
+    <a class='content-type dropdown-button btn waves-effect waves-light red lighten-4 right' href='#' data-activates='dropdown1'>Content Type!</a>
+      <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#text">text</a></li>
+      <li><a href="#md">mark down</a></li>
+      <li class="divider">divider</li>
+      <li><a href="#code">code</a></li>
+    </ul>
+
+  </div>
+  </form>
+
+
+{% endblock %}
+
+{% block footer-js %}
+{% endblock %}
+

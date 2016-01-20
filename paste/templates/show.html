@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block main %}
+
+  <div class="row">
+    <div class="col s12 red lighten-4">
+      <h5>Paste Details</h5>
+    </div>
+    <div class="col s12 red lighten-5">
+      <span>posted on {{ code.c_time }}</span>
+    </div>
+    <div class="code-detail">
+      <span>{{ code.org_text }}</span>
+    </div>
+  </div>
+
+{% endblock %}

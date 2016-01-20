@@ -1,0 +1,32 @@
+nav .brand-logo {
+    padding:0 15px;
+}
+.main-content{
+    height: auto;
+    padding: 1% 10%;
+}
+.code{
+    height: 400px;
+    border: 1px solid #ee6e73;
+    max-width: 100%;
+}
+.code:focus{
+    box-shadow: 0 0 5px rgba(238, 110, 115, 1);
+    outline: none !important;
+}
+.tools{
+    overflow: hidden;
+}
+.content-type{
+    margin-right: 10px;
+}
+.dropdown-content li>a, .dropdown-content li>span{
+    color: #EF9A9A !important;
+}
+.code-detail{
+    border: 1px solid #FFEBEE !important;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+    min-height: 17em;
+}
