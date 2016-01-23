@@ -9,8 +9,15 @@
       <span>posted on {{ code.c_time }}</span>
     </div>
     <div class="code-detail">
-      <span>{{ code.org_text }}</span>
+      <pre><code>{{ code.org_text }}</code></pre>
     </div>
   </div>
+
+{% endblock %}
+
+
+{% block footer-js %}
+<script type="text/javascript" src="/static/js/show.js"></script>
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 {% endblock %}
