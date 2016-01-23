@@ -1,0 +1,30 @@
+.header {
+    color: #ee6e73;
+    font-weight: 300;
+}
+.caption{
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: rgba(0,0,0,0.71);
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+}
+
+.container .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.members .image-container img{
+    max-width: 186px;
+    border-radius: 50%;
+}
+.container{
+    width: 90%;
+    margin-left: 10%;
+}
+.members .caption{
+    font-size: 15px;
+}
