@@ -107,6 +107,8 @@ STATICFILES_DIRS = (
     '/var/www/static/',
 )
 
+
+
 try:
     from my_settings import *
 except Exception, e:

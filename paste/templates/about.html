@@ -1,5 +1,87 @@
 {% extends 'base.html' %}
+
+{% block head %}
+    <link type="text/css" rel="stylesheet" href="static/css/about.css"  media="screen,projection"/>
+{% endblock %}
+
 {% block main %}
-  <h1>about</h1>
+   <main>
+
+      <div class="container">
+        <!--  Outer row  -->
+        <div class="row">
+          <div class="col s12 m9 l10">
+            <!--  Material Design -->
+            <div id="materialdesign" class="section scrollspy">
+              <h2 class="header">Paste Bin</h2>
+              <p class="caption">Created and designed by Uturboo,Paste Bin is a clipboard tool for everyone.</p>
+              <div class="video-container">
+                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0"
+                        allowfullscreen=""></iframe>
+              </div>
+            </div>
+
+            <!--  About the Team-->
+            <div id="team" class="section scrollspy">
+              <div class="row">
+                <h2 class="header">Meet the Team</h2>
+                <p class="caption">We are a team of geek from Beijing.</p>
+                <div class="s12 center">
+                  <div class="image-container">
+                    <img src="/static/images/team.jpg" style="width:100%;">
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="row members">
+                <div class="col s12 m3 center-on-small-only">
+                  <div class="image-container">
+                    <img src="/static/images/wangyang.jpg">
+                  </div>
+                </div>
+                <div class="col s12 m9">
+                  <h4>Wysea</h4>
+                  <p class="caption">Alvin is an Information Systems and Human Computer Interaction Major. He worked as a Software
+                    Engineer at Fidelity Investments this past summer.</p>
+                </div>
+              </div>
+
+              <div class="row members">
+                <div class="col s12 m3 center-on-small-only">
+                  <div class="image-container">
+                    <img src="/static/images/quxl.jpg">
+                  </div>
+                </div>
+                <div class="col s12 m9">
+                  <h4>Green Pine</h4>
+                  <p class="caption">Green Pine is an Computer Engineering and Science Major. He worked as a Software
+                    Engineer at Douban this past year.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- Table of Contents -->
+          <div class="col hide-on-small-only m3 l2">
+            <div class="toc-wrapper pin-top" style="top: 0px;">
+              <div style="height: 1px;">
+                <ul class="section scrollspy table-of-contents">
+                  <li><a href="#materialdesign" class="active">Paste Bin</a></li>
+                  <li><a href="#team" class="">Meet the Team</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- End Container -->
+    </main>
+
+{% endblock %}
+
+{% block footer-js %}
+<script type="text/javascript" src="/static/js/about.js"></script>
 
 {% endblock %}

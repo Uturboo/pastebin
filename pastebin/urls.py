@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 
 from paste.views import NewPasteView, ShowView
 
+
 urlpatterns = [
     url(r'^$', NewPasteView.as_view(), name='new'),
     url(r'^show/(?P<id>\d+)/', ShowView.as_view(), name='show'),
