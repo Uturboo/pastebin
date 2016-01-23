@@ -29,4 +29,5 @@ nav .brand-logo {
     width: 100%;
     display: inline-block;
     min-height: 17em;
+    word-wrap: break-word;
 }
