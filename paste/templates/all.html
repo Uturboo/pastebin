@@ -1,5 +1,47 @@
 {% extends 'base.html' %}
 {% block main %}
-  <h1>all</h1>
+  <ul class="collection with-header">
+    <li class="collection-header"><h4>All Pastes</h4></li>
+    {% for paste in pastes %}
+
+
+      <div class="card" onclick="javascript:onClick=window.open('/show/{{ paste.id }}/', '_blank ')">
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-1">Paste at: {{ paste.c_time }}<i class="material-icons right">more_vert</i></span>
+          <pre style="max-height: 6.7em; overflow: hidden"><code>{{ paste.org_text }}</code></pre>
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </ul>
+
+  <ul class="pagination">
+    {% if page.current == 1 %}
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      {% else %}
+       <li class="waves-effect"><a href="/all/{{ page.current|add:-1 }}"><i class="material-icons">chevron_left</i></a></li>
+    {% endif %}
+
+    {% for p in page.total_page %}
+      {% if page.current == p %}
+        <li class="active"><a href="/all/{{ p }}">{{ p }}</a></li>
+        {% else %}
+        <li class="waves-effect"><a href="/all/{{ p }}">{{ p }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+  {% if page.current < page.page_num %}
+    <li class="waves-effect"><a href="/all/{{ page.current|add:1 }}"><i class="material-icons">chevron_right</i></a></li>
+    {% else %}
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  {% endif %}
+  </ul>
+
+{% endblock %}
+
+{% block footer-js %}
+<link rel="stylesheet" href="/static/css/all.css">
 
 {% endblock %}
