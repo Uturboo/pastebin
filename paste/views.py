@@ -23,3 +23,27 @@ class ShowView(TemplateView):
     def get_context_data(self, **kwargs):
         code = get_object_or_404(Code, id=kwargs.get('id', 0))
         return {'code': code}
+
+
+class AllPastesView(TemplateView):
+    template_name = 'all.html'
+
+    def get_context_data(self, **kwargs):
+        pastes = Code.objects.all()[:10]
+        total_pages = len(Code.objects.all())
+        page = dict(total_page=range(1, total_pages/10 + 1), current=1)
+        return dict(pastes=pastes, page=page)
+
+
+class PageView(TemplateView):
+    template_name = 'all.html'
+
+    def get_context_data(self, **kwargs):
+        p = int(kwargs.get('page'))
+        start = (p - 1) * 10
+        pastes = Code.objects.all()[start: start + 10]
+        total_pages = Code.objects.count()
+        page = dict(total_page=range(1, total_pages/10 + 1), current=int(kwargs.get('page')), page_num=total_pages/10)
+        return dict(pastes=pastes, page=page)
+
+
