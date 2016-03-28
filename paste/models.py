@@ -9,3 +9,6 @@ class Code(models.Model):
     md_text = fields.TextField()
     c_time = fields.DateTimeField(auto_now_add=True)
     u_time = fields.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ('-c_time',)
