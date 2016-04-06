@@ -3,7 +3,11 @@
 
 ### Update Logs
 
-#### 1.12016-03-17
+#### 1.2 2016-04-06
+- 增加 [Goole Tagmanager][tagmanager]代码
+- 增加 [Growing IO][gio] 监控代码
+
+#### 1.1 2016-03-17
 - 增加 all 页面
 - 移除 about 页面, paybal 黑帮图片
 
@@ -16,3 +20,6 @@ https://pastebin.uturboo.com/
 
 ### UI框架
 http://materializecss.com/
+
+[tagmanager]: https://tagmanager.google.com/
+[gio]: https://www.growingio.com
