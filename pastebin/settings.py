@@ -25,7 +25,7 @@ SECRET_KEY = '40+(7lf40qw9j0zr2vkb&&(8nmtk-_4v6_4+j+)l7^y=_d@3)='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.uturboo.com', ]
 
 
 # Application definition
@@ -108,6 +108,7 @@ STATICFILES_DIRS = (
 )
 
 
+X_FRAME_OPTIONS = 'ALLOW-FROM'
 
 try:
     from my_settings import *
